@@ -10,13 +10,12 @@ module.exports = {
     './app/app.jsx'
   ],
   externals: {
-    jquery: "jQuery"
+    jquery: 'jQuery'
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+      '$': 'jquery',
+      'jQuery': 'jquery'
     }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
@@ -37,10 +36,10 @@ module.exports = {
     ],
     alias: {
       app: 'app',
-      applicationStyles: "app/styles/app.scss",
-      actions: "app/actions/actions.jsx",
-      reducers: "app/reducers/reducers.jsx",
-      configureStore: "app/store/configureStore.jsx"
+      applicationStyles: 'app/styles/app.scss',
+      actions: 'app/actions/actions.jsx',
+      reducers: 'app/reducers/reducers.jsx',
+      configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -59,7 +58,7 @@ module.exports = {
   sassLoader: {
     includePaths: [
       path.resolve(__dirname, './node_modules/foundation-sites/scss')
-    ],
+    ]
   },
-  devtool: process.env.NODE_ENV === 'production' ? undefined : "cheap-module-eval-source-map"
-}
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-eval-source-map'
+};
